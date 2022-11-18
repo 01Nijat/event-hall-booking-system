@@ -1,0 +1,51 @@
+﻿@model  Event_Hall_Booking_System_MVC.Models.TblUser
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+
+<center>
+        @using (Html.BeginForm("Login", "Home"))
+        {
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <table borger="1" class="lgtable">
+                <tr>
+                    <td colspan="2" align="center"><h2>Sign In</h2></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <select id="loginoperant" name="operant">
+                            <option>User</option>
+                            <option>Admin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(m => m.email)</td>
+                    <td>@Html.TextBoxFor(m => m.email)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(m => m.pass)</td>
+                    <td>@Html.TextBoxFor(m => m.pass)</td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="Submit" value="Login" />
+
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        }
+    </center>
+

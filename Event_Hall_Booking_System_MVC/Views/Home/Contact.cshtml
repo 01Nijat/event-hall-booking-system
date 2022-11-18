@@ -1,0 +1,52 @@
+﻿@model  Event_Hall_Booking_System_MVC.Models.TblReview
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<center>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <table border="3" class="feedbacktable" bgcolor="Yellow" width="400px" height="250px">
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+            {
+                <tr>
+                    <td colspan="2" align="center"><h2>Send Feedback</h2></td>
+                </tr>
+                <tr>
+                    <td align="center"> Name</td>
+                    <td align="center">@Html.TextBoxFor(m => m.name, "{0:#.#}")</td>
+                </tr>
+                <tr>
+                    <td align="center">Email</td>
+                    <td align="center">@Html.TextBoxFor(m => m.email, "{0:#.#}")</td>
+                </tr>
+
+                <tr>
+                    <td align="center">Subject</td>
+                    <td align="center">@Html.TextBoxFor(m => m.subject)</td>
+                </tr>
+                <tr>
+                    <td align="center">Message</td>
+                    <td align="center">@Html.TextBoxFor(m => m.message)</td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" class="btn" name="btrSubmit" value="Send" bgcolor="Green" /></td>
+                </tr>
+            }
+        </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+</center>
+

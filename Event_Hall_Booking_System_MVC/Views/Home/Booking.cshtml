@@ -1,0 +1,66 @@
+﻿@model  Event_Hall_Booking_System_MVC.Models.TblBooking
+@{
+    ViewBag.Title = "Booking";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<center>
+        @Html.BeginForm("Booking", "Home")
+        {
+        <table align="center" hieght="600px" width="500px" class="rgtable" style="background-color:antiquewhite">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>Book Now</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Your Name</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.name)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Email</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.email)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Mobile</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.mobile)
+            </tr>
+            <tr>
+                <td align="center">Room Category</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.roomCategory)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Meeting Date</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.meetingDate)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Address</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.address)
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Description</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.description)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="Submit" class="btn" value="BookNow" />
+                </td>
+            </tr>
+        </table>
+        }
+    </center>
+
+
